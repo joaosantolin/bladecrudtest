@@ -21,3 +21,8 @@ Route::post('/admin/cadastro', [ProdutoController::class, 'store'])->name('produ
 
 //Rota para deletar o produto
 Route::delete('/admin/produtos/{id}', [ProdutoController::class, 'destroy'])->name('produtos.destroy');
+
+//Rota para pagina de login tem que fazer autorizaçào dps to com preguiça de fazer isso agora
+Route::get('/login', function () {
+    return view('login');
+});
